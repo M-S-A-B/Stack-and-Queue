@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+#define SIZE 5
+class queue{
+    int front,rear, ele;
+    int arr[100];
+    public:
+    queue(){
+        front=rear=-1;
+    };
+    void enq(int n);
+    int deq();
+    void disp();
+};
+void queue::enq(int n){
+    if(rear==SIZE-1){
+        cout<<"Queue overflow";
+        return;
+    }
+    else
+    {
+        if(front==-1)
+        front=0;
+        rear++;
+        arr[rear]=ele;
+    }
+    
+}
